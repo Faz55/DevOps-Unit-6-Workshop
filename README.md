@@ -15,22 +15,22 @@ Today we'll be using SSH to connect to a virtual machine, operate it remotely us
 The virtual machines we're going to be working with are going to be spun up using a tool called CloudFormation. This is an AWS tool that lets you specify resources and infrastructure you want using a YAML file. This YAML file describes the things you want, and CloudFormation will take this YAML file and create the resources for you. Sound familiar? That's right, it's *infrastructure as code* in action! 
 
 That said, we won't look in too much detail yet at the CloudFormation template we'll be deploying - it involves a few cloud specific concepts that we haven't covered yet. This preamble is mostly to explain that the bulk of the technical stuff that'll happen today will be happening on remote virtual machines, and in order for you to complete this workshop you'll only need:
-- A terminal with the ability to SSH into an EC2 VM (you could use the ACG terminal if needed)
-- An ACG account to spin up an AWS sandbox with (or an AWS account you're happy to create resources in)
+- A terminal with the ability to SSH into an EC2 VM (you could use the Pluralsight terminal if needed)
+- a Pluralsight account to spin up an AWS sandbox with (or an AWS account you're happy to create resources in)
 
-> If you're using an ACG account please don't forget that your AWS account automatically gets cleaned up after 4 hours. 
+> If you're using a Pluralsight account please don't forget that your AWS account automatically gets cleaned up after 4 hours. 
 > You can extend its lifespan 1 hour before cleanup from the cloud sandboxes page (it might be worth setting an alarm for this!).
 
 ### Using SSH
-If you haven't yet done so, you should make sure you have created SSH keys and are able to use them to connect to a remote machine (or if you are unable to, that you are happy to use an alternative like ACG terminal). Try creating an ACG cloud server and SSHing into it!
+If you haven't yet done so, you should make sure you have created SSH keys and are able to use them to connect to a remote machine (or if you are unable to, that you are happy to use an alternative like a Pluralsight terminal). Try creating a Pluralsight cloud server and SSHing into it!
 
-Github has a comprehensive guide for all major operating systems: [Connecting to Github with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+Github has a comprehensive guide for all major operating systems: [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 ## Morning (Part 1)
 
 ### Setting up the environment
 We're going to start by spinning up our workshop's virtual machines using CloudFormation.
-- Log into your ACG account and create an AWS cloud sandbox.
+- Log into your Pluralsight account and create an AWS cloud sandbox.
 - Using an incognito window and the credentials provided, log into your AWS cloud sandbox and navigate to the CloudFormation service. You can do this by clicking in the giant search box at the top of the AWS console and typing "CloudFormation".
 - The CloudFormation service has a "Create stack" button. Click this and upload the `chimera-cloudformation-template.yml` file from this repository. You can clone this repo locally to your machine first if that's your preferred way of getting this file on your machine. 
   - After this workshop, it might be worth having a quick look through this file - just to get a bit of an idea how the structure of YAML helps describe resources, and to see how much of it you think you can understand, or make educated guesses at how it works. 
