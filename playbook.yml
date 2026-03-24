@@ -9,3 +9,9 @@
       state: directory
       mode: '777'
     become: yes
+  
+  - name: Create folder for the Chimera webapp binary
+    ansible.builtin.file:
+      path: /opt/chimera/bin
+      state: directory
+    become: yes
