@@ -1,0 +1,11 @@
+- name: Install Chimera on new web servers
+  hosts: webservers
+  remote_user: ec2-user
+
+  tasks:
+  - name: Create log folder
+    ansible.builtin.file:
+      path: /var/log/chimera
+      state: directory
+      mode: '777'
+    become: yes
